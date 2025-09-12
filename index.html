@@ -1,38 +1,56 @@
 <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
 
 <html lang="en">
 
 <head>
 
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>🌸 Vasifa's Portfolio</title>
+  <title>Vasifa Taqdees - Portfolio</title>
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
 
   <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
 
   <style>
 
-    body {
+    /* Reset */
 
-      font-family: 'Roboto', sans-serif;
+    * {
 
       margin: 0;
 
       padding: 0;
 
-      background: linear-gradient(135deg, #d6f5d6, #ffe6f0, #fffdd0);
+      box-sizing: border-box;
 
-      background-size: 400% 400%;
+    }
 
-      animation: gradientBG 12s ease infinite;
+    body {
+
+      font-family: 'Roboto', sans-serif;
+
+      line-height: 1.6;
 
       color: #333;
 
-      line-height: 1.8;
+      background: linear-gradient(-45deg, #f3e5f5, #e1f5fe, #f1f8e9, #fff9c4);
+
+      background-size: 400% 400%;
+
+      animation: gradientBG 15s ease infinite;
 
     }
 
@@ -46,75 +64,45 @@
 
     }
 
-    /* Header */
-
     header {
 
       text-align: center;
 
-      padding: 2.5rem 1rem;
-
-      border-bottom: 1px solid #cce0cc;
-
-      background: rgba(255, 255, 255, 0.7);
-
-      backdrop-filter: blur(6px);
+      padding: 2rem 1rem;
 
     }
 
-    header .handwritten {
+    header h1 {
 
       font-family: 'Shadows Into Light', cursive;
 
-      font-size: 3.5rem;
+      font-size: 3rem;
 
-      margin: 0;
-
-      color: #2f4f2f;
+      color: #444;
 
     }
 
-    header .subtitle {
+    header h2 {
 
-      font-style: italic;
+      font-family: 'Playfair Display', serif;
 
-      margin: 0.4rem 0;
+      font-size: 1.5rem;
 
-      color: #555;
+      margin-top: 0.5rem;
+
+      color: #666;
 
     }
-
-    /* Navigation */
 
     nav {
-
-      background: #8fbf8f;
-
-      padding: 0.9rem;
-
-      position: sticky;
-
-      top: 0;
-
-      z-index: 100;
-
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-
-    }
-
-    nav ul {
 
       display: flex;
 
       justify-content: center;
 
-      gap: 2rem;
+      gap: 1.5rem;
 
-      list-style: none;
-
-      margin: 0;
-
-      padding: 0;
+      margin-top: 1rem;
 
     }
 
@@ -122,13 +110,11 @@
 
       text-decoration: none;
 
-      color: #fff;
+      color: #444;
 
       font-weight: bold;
 
-      letter-spacing: 0.5px;
-
-      transition: color 0.3s ease, transform 0.2s ease;
+      transition: color 0.3s ease;
 
     }
 
@@ -136,111 +122,79 @@
 
     nav a.active {
 
-      color: #ffe599;
-
-      transform: scale(1.05);
+      color: #00796b;
 
     }
-
-    /* Sections */
 
     section {
 
-      max-width: 850px;
+      padding: 4rem 2rem;
 
-      margin: 2.5rem auto;
+      max-width: 900px;
 
-      padding: 2rem;
-
-      background: #fffdf0;
-
-      border-radius: 16px;
-
-      box-shadow: 0 6px 10px rgba(0,0,0,0.08);
-
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: auto;
 
     }
 
-    section:hover {
+    section h3 {
 
-      transform: scale(1.01);
-
-      box-shadow: 0 10px 16px rgba(0,0,0,0.12);
-
-    }
-
-    section h2 {
-
-      font-family: 'Playfair Display', serif;
-
-      color: #2f4f2f;
+      font-size: 2rem;
 
       margin-bottom: 1rem;
 
-      border-left: 5px solid #8fbf8f;
+      color: #333;
 
-      padding-left: 0.6rem;
-
-    }
-
-    /* Contact Section */
-
-    #contact ul {
-
-      list-style: none;
-
-      padding: 0;
-
-      margin: 1rem 0 0;
+      text-align: center;
 
     }
 
-    #contact li {
+    ul {
 
-      margin: 0.6rem 0;
+      list-style: square;
 
-      font-size: 1.1rem;
-
-    }
-
-    #contact a {
-
-      color: #2f4f2f;
-
-      font-weight: bold;
-
-      text-decoration: none;
-
-      transition: color 0.3s ease;
+      padding-left: 1.5rem;
 
     }
 
-    #contact a:hover {
+    .projects {
 
-      text-decoration: underline;
+      display: grid;
 
-      color: #4b6d4b;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+      gap: 1.5rem;
 
     }
 
-    /* Footer */
+    .project-card {
+
+      background: #fff;
+
+      padding: 1rem;
+
+      border-radius: 12px;
+
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+      transition: transform 0.3s ease;
+
+    }
+
+    .project-card:hover {
+
+      transform: translateY(-5px);
+
+    }
 
     footer {
 
       text-align: center;
 
-      padding: 1.2rem;
+      padding: 2rem 1rem;
 
-      background: #8fbf8f;
+      background: rgba(255,255,255,0.7);
 
-      color: #fff;
-
-      margin-top: 2.5rem;
-
-      font-size: 0.95rem;
-
-      letter-spacing: 0.3px;
+      margin-top: 2rem;
 
     }
 
@@ -252,79 +206,47 @@
 
   <header>
 
-    <h1 class="handwritten">🌸 Vasifa Taqdees</h1>
+    <h1>Vasifa Taqdees</h1>
 
-    <p class="subtitle">✨ AI Student • Creative Thinker ✨</p>
+    <h2>Artificial Intelligence Student</h2>
 
-    <p>Welcome to my cozy little corner of the web 🌿</p>
+    <nav>
+
+      <a href="#about" class="active">About</a>
+
+      <a href="#skills">Skills</a>
+
+      <a href="#achievements">Achievements</a>
+
+      <a href="#projects">Projects</a>
+
+      <a href="#contact">Contact</a>
+
+    </nav>
 
   </header>
 
-  <nav>
-
-    <ul>
-
-      <li><a href="#about">About</a></li>
-
-      <li><a href="#hobbies">Hobbies</a></li>
-
-      <li><a href="#skills">Skills</a></li>
-
-      <li><a href="#achievements">Achievements</a></li>
-
-      <li><a href="#projects">Projects</a></li>
-
-      <li><a href="#contact">Contact</a></li>
-
-    </ul>
-
-  </nav>
-
   <section id="about">
 
-    <h2>About Me 💡</h2>
+    <h3>About Me</h3>
 
-    <p>Hi there! 👋 I’m <strong>Vasifa</strong>, a student of Artificial Intelligence who enjoys blending creativity with technology.  
-
-    This portfolio is like my digital diary — a mix of things I’ve learned, done, and loved along the way. 🌸</p>
-
-  </section>
-
-  <section id="hobbies">
-
-    <h2>Things I Love 🌟</h2>
-
-    <p>When I’m not studying AI, I recharge myself by doing things that make me happy:</p>
-
-    <ul>
-
-      <li>🎨 Arts and Crafts</li>
-
-      <li>🌱 Planting Trees</li>
-
-      <li>📚 Reading Books</li>
-
-      <li>✨ Learning New Things</li>
-
-    </ul>
+    <p>Hello! I’m Vasifa, a student of Artificial Intelligence. Passionate about technology, learning, and creativity.</p>
 
   </section>
 
   <section id="skills">
 
-    <h2>Skills ⚡</h2>
-
-    <p>Here are a few skills that help me shine, both in studies and in life:</p>
+    <h3>Skills</h3>
 
     <ul>
 
-      <li>⌨️ Fast Typing</li>
+      <li>Python, HTML, CSS, JavaScript</li>
 
-      <li>🎬 Editing</li>
+      <li>Machine Learning basics</li>
 
-      <li>👂 Active Listening</li>
+      <li>Problem-solving & logical thinking</li>
 
-      <li>🗣️ Communication</li>
+      <li>Communication & teamwork</li>
 
     </ul>
 
@@ -332,17 +254,13 @@
 
   <section id="achievements">
 
-    <h2>My Little Wins 🏆</h2>
-
-    <p>I’m grateful for every step I’ve taken so far, including:</p>
+    <h3>Achievements</h3>
 
     <ul>
 
-      <li>🌟 Winning speech & essay competitions</li>
+      <li>Presented a paper on Smart Technology</li>
 
-      <li>📜 Academic Topper Certificate</li>
-
-      <li>🎙️ Recitation & Quran passion projects</li>
+      <li>Participated in Tamil speech competition</li>
 
     </ul>
 
@@ -350,85 +268,75 @@
 
   <section id="projects">
 
-    <h2>Projects 🚀</h2>
+    <h3>Projects</h3>
 
-    <p>A few things I’ve worked on with curiosity and love:</p>
+    <div class="projects">
 
-    <ul>
+      <div class="project-card">
 
-      <li>📑 Research Paper on <em>Smart Technology</em></li>
+        <h4>Portfolio Website</h4>
 
-      <li>🖥️ PPT Presentation about Smart Technology</li>
+        <p>A personal portfolio built with HTML, CSS, and JS showcasing skills and achievements.</p>
 
-      <li>💻 Building this Digital Portfolio</li>
+      </div>
 
-    </ul>
+      <div class="project-card">
+
+        <h4>AI Mini Project</h4>
+
+        <p>A simple AI project demonstrating basic machine learning concepts.</p>
+
+      </div>
+
+    </div>
 
   </section>
 
   <section id="contact">
 
-    <h2>Let’s Connect 💌</h2>
+    <h3>Contact</h3>
 
-    <p>I’d love to hear from you! Here’s how you can reach me:</p>
-
-    <ul>
-
-      <li>📧 Email: <a href="mailto:vasifa@example.com">vasifa@example.com</a></li>
-
-      <li>📱 Phone: +91 9876543210</li>
-
-      <li>🌐 LinkedIn: <a href="https://www.linkedin.com/in/vasifa" target="_blank">linkedin.com/in/vasifa</a></li>
-
-    </ul>
+    <p>Email: <a href="mailto:vasifa@example.com">vasifa@example.com</a></p>
 
   </section>
 
   <footer>
 
-    <p>✨ Made with love & pastel vibes by Vasifa Taqdees ✨</p>
+    <p>&copy; 2025 Vasifa Taqdees. All rights reserved.</p>
 
   </footer>
 
   <script>
 
-    // Smooth scrolling
+    // Highlight active nav link on scroll
 
-    document.querySelectorAll("nav a").forEach(link => {
+    const sections = document.querySelectorAll("section");
 
-      link.addEventListener("click", e => {
-
-        e.preventDefault();
-
-        document.querySelector(link.getAttribute("href"))
-
-          .scrollIntoView({ behavior: "smooth" });
-
-      });
-
-    });
-
-    // Active link highlight
+    const navLinks = document.querySelectorAll("nav a");
 
     window.addEventListener("scroll", () => {
 
-      let sections = document.querySelectorAll("section");
+      let current = "";
 
-      let links = document.querySelectorAll("nav a");
+      sections.forEach(section => {
 
-      sections.forEach((sec, i) => {
+        const sectionTop = section.offsetTop - 100;
 
-        let top = window.scrollY;
+        if (scrollY >= sectionTop) {
 
-        let offset = sec.offsetTop - 120;
+          current = section.getAttribute("id");
 
-        let height = sec.offsetHeight;
+        }
 
-        if (top >= offset && top < offset + height) {
+      });
 
-          links.forEach(link => link.classList.remove("active"));
+      navLinks.forEach(link => {
 
-          links[i].classList.add("active");
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+
+          link.classList.add("active");
 
         }
 
@@ -440,4 +348,8 @@
 
 </body>
 
+</html>
+<!-- partial -->
+  
+</body>
 </html>
